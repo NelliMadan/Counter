@@ -36,8 +36,7 @@ clickHandler = ()=>{
                 }
                 
                 <PlusButton/>
-                <p>
-                  <button onClick={this.props.getTasks}>Get tasks</button>  
+                <p> 
                   <button onClick={this.clickHandler}>clicke me</button>  
                 </p>
                 
@@ -79,8 +78,7 @@ function Counter (props){
             }
             
             <PlusButton/>
-            <div>
-                <button onClick={props.getTasks}>Get tasks</button>  
+            <div> 
                 <button onClick={clickHandler}>clicke me</button>  
                 <div>
                     <input type="text" 
@@ -95,8 +93,6 @@ function Counter (props){
     );
         
 }
-const mapDispatchToProps = {
-    getTasks:actions.getTasks   
-};
 
-export default connect(null,mapDispatchToProps)(Counter);
+
+export default connect()(Counter);
